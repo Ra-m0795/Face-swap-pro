@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceSwap Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>FaceSwap Pro</h1>
+        <p>Swap faces between images with AI magic</p>
+    </header>
+
+    <main>
+        <div class="upload-section">
+            <div class="upload-box" id="upload1">
+                <h3>Upload Image 1</h3>
+                <input type="file" id="fileInput1" accept="image/*">
+                <canvas id="canvas1"></canvas>
+            </div>
+            <div class="upload-box" id="upload2">
+                <h3>Upload Image 2</h3>
+                <input type="file" id="fileInput2" accept="image/*">
+                <canvas id="canvas2"></canvas>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="swapBtn">Swap Faces</button>
+            <button id="resetBtn">Reset</button>
+            <button id="downloadBtn">Download Result</button>
+        </div>
+
+        <div class="result-section">
+            <h2>Result</h2>
+            <canvas id="resultCanvas"></canvas>
+        </div>
+
+        <div class="video-section">
+            <h2>Video Face Swap (Coming Soon)</h2>
+            <video id="videoInput" width="400" controls></video>
+            <input type="file" id="videoUpload" accept="video/*">
+            <button id="processVideoBtn" disabled>Process Video</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 FaceSwap Pro | Powered by face-api.js</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
